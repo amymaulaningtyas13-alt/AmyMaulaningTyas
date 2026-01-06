@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Digital - Where Coffee Meets Digital</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* HEADER */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 15px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            color: #007bff;
+        }
+
+        /* SECTION */
+        section {
+            padding: 100px 0 50px;
+            min-height: 100vh;
+        }
+
+        #hero {
+            background: url('images/herocontent.jpg') no-repeat center/cover;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        /* STATS */
+        #quick-stats {
+            background: #f8f9fa;
+            text-align: center;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            margin: 20px;
+        }
+
+        .stat h2 {
+            color: #007bff;
+            font-size: 2em;
+        }
+
+        /* ABOUT */
+        .about-section {
+            margin-bottom: 40px;
+        }
+
+        .team-photos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .team-photos img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin: 10px;
+        }
+
+        .menu-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .menu-table th,
+        .menu-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        .signature-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .item {
+            width: 250px;
+            margin: 20px;
+            text-align: center;
+        }
+
+        /* FACILITIES */
+        #facilities {
+            background: #f8f9fa;
+        }
+
+        .facilities-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            list-style: none;
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .photo-gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* MAP (SUDAH DIPERBAIKI) */
+        #map-placeholder {
+            height: 300px;
+            margin: 20px 0;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        #map-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* FORM */
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        form input,
+        form textarea,
+        form button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        form button {
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            .stats,
+            .signature-items,
+            .facilities-list {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#facilities">Facilities</a></li>
+                <li><a href="#contact-locations">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h1>Where Coffee Meets Digital</h1>
+            <p>Tempat kopi bertemu inovasi digital</p>
+        </div>
+    </section>
+
+    <section id="quick-stats">
+        <div class="container">
+            <div class="stats">
+                <div class="stat">
+                    <h2>2</h2>
+                    <p>Cabang</p>
+                </div>
+                <div class="stat">
+                    <h2>5000+</h2>
+                    <p>Pelanggan</p>
+                </div>
+                <div class="stat">
+                    <h2>4.8</h2>
+                    <p>Rating</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-us">
+        <div class="container">
+            <h2>About Us</h2>
+
+            <div class="about-section">
+                <h3>Company Story</h3>
+                <p>Cafe kami berdiri sejak 2020 dengan konsep digital modern.</p>
+            </div>
+
+            <div class="about-section">
+                <h3>Team</h3>
+                <div class="team-photos">
+                    <img src="images/G2.jpg">
+                    <img src="images/G3.jpg">
+                    <img src="images/G4.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="facilities">
+        <div class="container">
+            <h2>Facilities</h2>
+
+            <ul class="facilities-list">
+                <li>WiFi Cepat</li>
+                <li>Meeting Room</li>
+                <li>Charging Station</li>
+                <li>Outdoor Area</li>
+            </ul>
+
+            <div class="photo-gallery">
+                <img src="images/G5.jpg">
+                <img src="images/G6.jpg">
+                <img src="images/G7.jpg">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-locations">
+        <div class="container">
+            <h2>Location</h2>
+
+            <!-- MAP SUDAH BENAR -->
+            <div id="map-placeholder">
+                <img src="images/Maps.jpg" alt="Lokasi Cafe Digital">
+            </div>
+
+            <h3>Reservasi</h3>
+            <form>
+                <input type="text" placeholder="Nama" required>
+                <input type="email" placeholder="Email" required>
+                <input type="date" required>
+                <input type="time" required>
+                <button>Reservasi Sekarang</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Cafe Digital</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href'))
+                    .scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+<script>
+    /* =========================
+       Smooth Scrolling
+    ========================== */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+
+    /* =========================
+       Navbar Active on Scroll
+    ========================== */
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav ul li a");
+
+    window.addEventListener("scroll", () => {
+        let current = "";
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 120;
+            if (scrollY >= sectionTop) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${current}`) {
+                link.classList.add("active");
+            }
+        });
+    });
+
+    /* =========================
+       Header Shadow on Scroll
+    ========================== */
+    const header = document.querySelector("header");
+
+    window.addEventListener("scroll", () => {
+        header.style.boxShadow =
+            window.scrollY > 50
+                ? "0 4px 10px rgba(0,0,0,0.15)"
+                : "0 2px 5px rgba(0,0,0,0.1)";
+    });
+
+    /* =========================
+       Counter Animation
+    ========================== */
+    const counters = document.querySelectorAll(".stat h2");
+    let counterRun = false;
+
+    function startCounter() {
+        counters.forEach(counter => {
+            const isPlus = counter.innerText.includes("+");
+            const target = parseFloat(counter.innerText.replace("+", ""));
+            let count = 0;
+            const speed = target / 100;
+
+            function update() {
+                if (count < target) {
+                    count += speed;
+                    counter.innerText =
+                        Math.ceil(count) + (isPlus ? "+" : "");
+                    requestAnimationFrame(update);
+                } else {
+                    counter.innerText = target + (isPlus ? "+" : "");
+                }
+            }
+            update();
+        });
+    }
+
+    window.addEventListener("scroll", () => {
+        const stats = document.getElementById("quick-stats");
+        if (!counterRun && window.scrollY > stats.offsetTop - window.innerHeight) {
+            startCounter();
+            counterRun = true;
+        }
+    });
+
+    /* =========================
+       Form Validation
+    ========================== */
+    const form = document.querySelector("form");
+
+    if (form) {
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const inputs = form.querySelectorAll("input[required]");
+            let valid = true;
+
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    valid = false;
+                    input.style.border = "2px solid red";
+                } else {
+                    input.style.border = "1px solid #ccc";
+                }
+            });
+
+            if (!valid) {
+                alert("Mohon lengkapi semua data reservasi!");
+                return;
+            }
+
+            alert("Reservasi berhasil! Terima kasih 🙏");
+            form.reset();
+        });
+    }
+
+    /* =========================
+       Map Click Interaction
+    ========================== */
+    const map = document.getElementById("map-placeholder");
+
+    if (map) {
+        map.addEventListener("click", () => {
+            alert("Ini contoh peta lokasi. Bisa diganti Google Maps.");
+        });
+    }
+</script>
+
+</body>
+
+</html>

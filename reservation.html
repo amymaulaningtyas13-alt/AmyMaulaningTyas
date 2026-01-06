@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservasi | Cafe Digital</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .checkbox {
+            margin-top: 15px;
+        }
+
+        .checkbox input {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 12px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        /* SUPPORT & FAQ */
+        .support,
+        .faq {
+            margin-top: 40px;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+        }
+
+        footer {
+            text-align: center;
+            margin: 30px 0;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Halaman Reservasi</h1>
+        <p>Cafe Digital – Where Coffee Meets Digital</p>
+    </header>
+
+    <div class="container">
+
+        <!-- FORM RESERVASI -->
+        <h2>Form Reservasi</h2>
+
+        <form id="reservationForm">
+
+            <label>Nama Lengkap</label>
+            <input type="text" name="nama" required>
+
+            <label>Email</label>
+            <input type="email" name="email" required>
+
+            <label>Tanggal Reservasi</label>
+            <input type="date" name="tanggal" required>
+
+            <label>Jam Reservasi</label>
+            <input type="time" name="jam" required>
+
+            <label>Jumlah Orang</label>
+            <input type="number" name="jumlah" min="1" max="10" required>
+
+            <label>Pilih Cabang</label>
+            <select name="cabang" required>
+                <option value="">-- Pilih Cabang --</option>
+                <option value="Jakarta">Jakarta</option>
+                <option value="Bandung">Bandung</option>
+            </select>
+
+            <label>Permintaan Khusus</label>
+            <textarea name="permintaan" rows="4" placeholder="Contoh: meja dekat jendela, ulang tahun, dll"></textarea>
+
+            <div class="checkbox">
+                <input type="checkbox" id="konfirmasi" required>
+                <label for="konfirmasi">Saya mengonfirmasi data reservasi sudah benar</label>
+            </div>
+
+            <button type="submit">Kirim Reservasi</button>
+        </form>
+
+        <!-- CONTACT SUPPORT -->
+        <div class="support">
+            <h2>Contact Support</h2>
+            <p>Email : support@cafedigital.com</p>
+            <p>Telepon : +62 812-3456-7890</p>
+            <p>Jam Operasional : 08.00 – 22.00 WIB</p>
+        </div>
+
+        <!-- FAQ -->
+        <div class="faq">
+            <h2>FAQ (Pertanyaan Umum)</h2>
+
+            <div class="faq-item">
+                <strong>1. Apakah reservasi wajib?</strong>
+                <p>Tidak wajib, namun sangat disarankan saat jam ramai.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>2. Berapa lama maksimal waktu reservasi?</strong>
+                <p>Reservasi berlaku selama 15 menit setelah jam yang dipilih.</p>
+            </div>
+
+            <div class="faq-item">
+                <strong>3. Apakah bisa membatalkan reservasi?</strong>
+                <p>Bisa, silakan hubungi contact support kami.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Cafe Digital</p>
+    </footer>
+
+    <script>
+        // Validasi Form Reservasi
+        document.getElementById("reservationForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            alert("Reservasi berhasil dikirim! Terima kasih 🙏");
+            this.reset();
+        });
+    </script>
+
+</body>
+
+</html>
